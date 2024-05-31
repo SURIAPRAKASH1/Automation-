@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automate Insta</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="container">
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h2>About me !</h2>
+                <p>Let me tell you something about me.I'am a automate test software .I can automate
+                    <strong>Instagram</strong>. So let me help you to do your boring job.
+                </p>
+
+            </div>
+        </div>
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h2>Details</h2>
+                <form method="post" action="{% url 'home_page' %}">
+                    {% csrf_token %}
+
+                    <label class="user-name" for="username">Username:</label>
+                    <input type="text" id="username" name="username" required placeholder="insta username "><br>
+
+                    <label class="pass-word" for="password">Password:</label>
+                    <input type="password" id="password" name="password" required placeholder="insta password"><br>
+
+                    <label class="account-name" for="custom_input">Account Name:</label>
+                    <input type="text" id="custom_input" name="custom_input" required placeholder="Account name..!"><br>
+
+                    <input class="login-button" type="submit" value="Login">
+                </form>
+            </div>
+
+        </div>
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h2>What i can?</h2>
+                <p>if u enter ur details i can go to ur instagram account and do like,commend,post by ur means. so just
+                    have fun with me that's all</p>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
